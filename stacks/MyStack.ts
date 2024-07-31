@@ -91,6 +91,7 @@ export function API({ stack }: StackContext) {
 		"OrderTrackingStateMachine",
 		{
 			definition,
+			stateMachineName: "OrderTrackingStateMachine"
 		}
 	);
 
