@@ -18,14 +18,14 @@ async function updateOrderStatusAndToken(
 		Key: {
 			id: orderId,
 		},
-		UpdateExpression: "SET #status = :status, #token = :token",
+		UpdateExpression: "SET #status = :status, #taskToken = :taskToken",
 		ExpressionAttributeNames: {
 			"#status": "status",
-			"#token": "token",
+			"#taskToken": "taskToken",
 		},
 		ExpressionAttributeValues: {
 			":status": newStatus,
-			":token": newToken,
+			":taskToken": newToken,
 		},
 		ReturnValues: "ALL_NEW",
 	};
